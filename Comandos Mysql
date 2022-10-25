@@ -113,4 +113,48 @@ update aluno set sexo = "M" where nome = "Pedro" or nome = "Lucas" or nome = "An
 
 select * from aluno where endereco = "Rua A";
 
+select * from aluno where endereco = "Rua A" and sexo = "M";
 
+-> Crie um banco de dados  com o nome exercicio2
+  Crie a seguinte tabela
+     convidado
+     com os seguintes campos
+ nome varchar(20),
+ bairro varchar(20),
+ cidade varchar(20),
+ estado char(2),
+ paratesco varchar(15),
+ presente varchar(20),
+ Valor decimal
+ );
+ 
+ Cadastre 5 registro na tabela de convidados
+ liste o nome e o parentesco dos convidados
+ liste todos os convidados que darão presente com o valor maior que 500
+ 
+ create database exercicio2;
+ use exercicio2;
+ create table convidado (
+ nome varchar(20),
+ bairro varchar(20),
+ cidade varchar(20),
+ estado char(2),
+ paratesco varchar(15),
+ presente varchar(20),
+ Valor decimal
+ );
+ 
+ show tables;
+ 
+insert into convidado values("Rafaela","Barra da Tijuca","Rio de Janeiro","RJ","Mae", "Boneca",100);
+insert into convidado values("Daniel","Barra da Tijuca","Rio de Janeiro","RJ","Pai","Bicicleta",650);
+insert into convidado values("Gabriele","Iraja","Rio de Janeiro","RJ","Tia", "Tablet",850);
+insert into convidado values("Samyla","Pavuna","Rio de Janeiro","RJ","Tia", "Casa de Boneca",400);
+insert into convidado values("Sonia","Freguesia","Rio de Janeiro","RJ","Avo", "Vestido",200);
+ 
+ select * from convidado;
+ 
+ select nome, paratesco from convidado;
+ 
+ select * from convidado nome where valor  >=500; 
+  
