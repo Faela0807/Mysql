@@ -1,10 +1,12 @@
--xampp > mysql > shell
--mysql-u root
--show databases;
--criar base de dados: create database aula1tarde;
--como usar/conectar: use aula1tarde;
--apagar base de dados: drop database aula1tarde;
--criar tabela: create table aluno(
+AULA1 - 24/10
+
+xampp > mysql > shell
+mysql -u root
+show databases;
+criar base de dados: create database aula1tarde;
+como usar/conectar: use aula1tarde;
+apagar base de dados: drop database aula1tarde;
+criar tabela: create table aluno(
 nome varchar(50),
 idade int,
 endereço varchar(50),
@@ -12,13 +14,11 @@ estado varchar(2),
 sexo enum("f","m"));
 - cadastrar um aluno na tabela de aluno:
 insert into aluno values("ethan",6,"rua a","rj","m");
--visualizar os alunos cadastrados(*todos) : select * from aluno;
--visualizar informação especifica  cadastrados(*todos) : select nome from aluno;
+visualizar os alunos cadastrados(*todos) : select * from aluno;
+visualizar informação especifica  cadastrados(*todos) : select nome from aluno;
 
 exercicio: Crie um banco de dados com o nome GASTRONOMIA, dentro deste banco crie a seguinte tabela:
 Receita : nome, autor, ingrediente e tipo enum("doce","salgado"). Cadastre 5 tipos de receitas nesta tabela.
-
-
 
 
 create database gastronomia;
@@ -40,20 +40,77 @@ insert into Receitas values("Pudim","Julia","Ovos","Doce");
 insert into Receitas values("Salgadinhos","Théo","Frango desfiado","Salgado");
 
 
+AULA 2 - 25/10
+
+xampp > mysql > shell
+mysql -u root
+show databases;
+criar base de dados: create database aula2;
+show databases;
+como usar/conectar: use aula2;
+
+/*Fase de modelagem
+Fase 1 conceitual
+
+Apenas um rascunho do que iremos fazer no banco de dados. a fase conceitual pode ser feita em 
+qualquer editor de texto...
+
+FASE 1
+Aluno - TABELA
+Nome CARACTER(50)
+Sexo CARACTER 1
+Idade Numerico 2
+Endereço Numerico (100)
+Telefone caracter (20)
+Email Caracter (30)
+
+FASE 2 - LOGICA
+
+Trazer o que fizemos na fase 1 até algum proghrama de modelagem e realizar o 
+diagrama de entidade e relacionamento.
+
+FASE 3 - FASE FISICA
+Script do Banco
+
+*/
+
+create table Aluno(
+nome varchar(50),
+sexo char(1),
+idade int,
+endereco varchar(100),
+telefone varchar(20),
+email varchar(30)
+);
+
+show tables;
+
+- Descrever o conteudo de uma tabela
+desc aluno;
+
+insert into aluno values("Ana","F",30,"Rua A", "1111-2222", "ana@gmail.com");
+insert into aluno values("Carla","F",35,"Rua B", "1111-3333", "carla@gmail.com");
+insert into aluno values("Antonio","M",40,"Rua A", "1111-4444", "antonio@gmail.com");
+insert into aluno values("Pedro","M",30,"Rua B", "1111-5555", "pedro@gmail.com");
+insert into aluno values("Lucas","M",45,"Rua A", "1111-6666", "lucas@gmail.com");
+insert into aluno values("Aline","F",15,"Rua C", "1111-7777", "alinea@gmail.com");
+insert into aluno values("Mariana","F",18,"Rua A", "1111-8888", "mariana@gmail.com");
+insert into aluno values("Josefa","F",80,"Rua A", "1111-9999", "josefa@gmail.com");
+
+select * from aluno;
+
+select nome , sexo from aluno;
+
+select 10 + 10 as "soma";
+
+select nome, email from aluno where sexo = 'F';
+
+update aluno set sexo = 'F'
+
+select * from aluno;
+
+update aluno set sexo = "M" where nome = "Pedro" or nome = "Lucas" or nome = "Antonio";
+
+select * from aluno where endereco = "Rua A";
 
 
-select * from Receitas;
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
