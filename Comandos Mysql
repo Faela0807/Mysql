@@ -33,11 +33,11 @@ Ingrediente text,
 Tipo enum("Doce","Salgado"));
 
 
-insert into Receitas values("Mousse de maracujá","Mycaelle","Leite condensado","Doce");
-insert into Receitas values("Bolo de cenoura","Joseph","Farinha de trigo","Doce");
-insert into Receitas values("Rabanada recheada com nutella","Ethan","Pão","Doce");
-insert into Receitas values("Pudim","Nilda","Ovos","Doce");
-insert into Receitas values("Salgadinhos","Maria","Frango desfiado","Salgado");
+insert into Receitas values("Mousse de maracujá","Rafaela","Leite condensado","Doce");
+insert into Receitas values("Bolo de cenoura","Daniel","Farinha de trigo","Doce");
+insert into Receitas values("Rabanada recheada com nutella","Ana","Pão","Doce");
+insert into Receitas values("Pudim","Julia","Ovos","Doce");
+insert into Receitas values("Salgadinhos","Théo","Frango desfiado","Salgado");
 
 
 
